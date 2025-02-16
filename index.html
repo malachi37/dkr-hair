@@ -84,8 +84,10 @@
     justify-content: space-evenly;  /* ממקם את העיגולים בצורה שווה */
     align-items: center;           /* מיישר את העיגולים במרכז */
     gap: 30px;
-    max-width: 1000px;
+    flex-wrap: nowrap;             /* מונע מעבר לשורה חדשה */
+    max-width: 100%;               /* מבטיח שהעיגולים יתפשטו עד לרוחב */
     margin: 60px auto;
+    overflow-x: auto;             /* אם העיגולים לא נכנסים במסך, יתווסף גלילה אופקית */
 }
 
         .category {
