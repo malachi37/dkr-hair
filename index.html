@@ -14,17 +14,17 @@
         }
 
         body {
-            background-color: #F8F5F2; /* גוון פנינה */
+            background-color: #F8F5F2;
             text-align: center;
         }
 
         /* ניווט עליון */
         .navbar {
             display: flex;
-            justify-content: space-between; /* מחלק את התפריט והלוגו לשני הצדדים */
+            justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
-            background-color: #1E1E1E; /* שחור עמוק */
+            background-color: #1E1E1E;
             color: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -36,13 +36,13 @@
             font-size: 24px;
             font-weight: bold;
             color: white;
-            margin-left: 20px; /* מציב את הלוגו בצד השמאלי */
+            margin-left: 20px;
         }
 
         .navbar .menu {
             display: flex;
             gap: 20px;
-            margin-right: 20px; /* מצמיד את התפריט לימין */
+            margin-right: 20px;
         }
 
         .navbar .menu a {
@@ -53,12 +53,12 @@
         }
 
         .navbar .menu a:hover {
-            color: #D4A373; /* זהב אלגנטי */
+            color: #D4A373;
         }
 
         /* באנר פרסומי */
         .promo-bar {
-            background: linear-gradient(to right, #D4A373, #B5838D); /* מעבר צבע זהב-ורוד עתיק */
+            background: linear-gradient(to right, #D4A373, #B5838D);
             padding: 12px;
             font-size: 14px;
             color: white;
@@ -74,20 +74,20 @@
 
         .hero h1 {
             font-size: 38px;
-            color: #1E1E1E; /* שחור אלגנטי */
+            color: #1E1E1E;
             font-weight: bold;
         }
 
         /* קטגוריות מוצרים */
         .categories {
             display: flex;
-            justify-content: space-evenly;  /* ממקם את העיגולים בצורה שווה */
-            align-items: center;           /* מיישר את העיגולים במרכז */
+            justify-content: space-evenly;
+            align-items: center;
             gap: 1px;
-            flex-wrap: nowrap;             /* מונע מעבר לשורה חדשה */
-            max-width: 100%;               /* מבטיח שהעיגולים יתפשטו עד לרוחב */
+            flex-wrap: nowrap;
+            max-width: 100%;
             margin: 60px auto;
-            overflow-x: auto;             /* אם העיגולים לא נכנסים במסך, יתווסף גלילה אופקית */
+            overflow-x: auto;
         }
 
         .category {
@@ -95,45 +95,34 @@
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            color: #1E1E1E; /* שחור אלגנטי */
+            color: #1E1E1E;
         }
 
         .category .circle {
-            width: 150px;  /* הגדלתי את הרוחב */
-            height: 150px; /* הגדלתי את הגובה */
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            background: radial-gradient(circle, #E8D8C4, #D4A373); /* גוון זהוב אלגנטי */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;  /* הגדלתי את גודל הטקסט */
-            font-weight: bold;
-            color: #1E1E1E;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-size: cover;
+            background-position: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         .category .circle:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background: radial-gradient(circle, #D4A373, #B5838D); /* זהב לורוד עתיק */
-            color: white;
         }
+
+        /* נתיב התמונות (ישירות ב-main, לא בתוך images/) */
+        .shampoo { background-image: url('shampoo.jpg'); }
+        .comb { background-image: url('comb.jpg'); }
+        .ointment { background-image: url('ointment.jpg'); }
 
         .category span {
             margin-top: 12px;
             font-size: 16px;
             font-weight: bold;
         }
-
-        /* סגנון התמונות בתוך העיגולים */
-        .category .circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%; /* תשמור על העיגול */
-        }
-
     </style>
 </head>
 <body>
@@ -164,21 +153,15 @@
     <!-- קטגוריות מוצרים -->
     <div class="categories">
         <a href="#" class="category">
-            <div class="circle">
-                <img src="images/shampoo.jpg" alt="שמפו" />
-            </div>
+            <div class="circle shampoo"></div>
             <span>שמפו</span>
         </a>
         <a href="#" class="category">
-            <div class="circle">
-                <img src="images/comb.jpg" alt="כלי שיער" />
-            </div>
+            <div class="circle comb"></div>
             <span>כלי שיער</span>
         </a>
         <a href="#" class="category">
-            <div class="circle">
-                <img src="images/ointment.jpg" alt="טיפולים" />
-            </div>
+            <div class="circle ointment"></div>
             <span>טיפולים</span>
         </a>
         <a href="#" class="category">
