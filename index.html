@@ -3,200 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="חנות המוצרי שיער של DKR - מוצרים איכותיים ומקצועיים לשיערך.">
-    <meta name="keywords" content="מוצרי שיער, DKR, שיער, תוספות שיער, טיפוח שיער">
-    <meta name="author" content="DKR Hair">
-    <title>DKR Hair</title>
+    <title>DKR Hair - חנות טיפוח לשיער</title>
     <style>
-        /* כלליים */
+        /* איפוס סגנונות דיפולטיביים */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        /* מבנה עמוד גמיש כדי שה-footer תמיד יוצג בתחתית */
-        html, body {
-            height: 100%;
+        body {
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        /* ניווט עליון */
+        .navbar {
             display: flex;
-            flex-direction: column;
-            background-color: #f5f3f1;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #2d1f1b;
-            text-align: right;
-        }
-
-        /* התוכן הראשי יתפוס את כל הגובה הזמין וידחוף את ה-footer למטה */
-        .container {
-            flex: 1;
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* תפריט ניווט */
-        nav {
-            background-color: #6b4f3a;
-            color: #f4f0e1;
-            padding: 12px 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #fff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            text-align: center;
         }
 
-        nav a {
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .menu a {
             text-decoration: none;
-            color: #f4f0e1;
-            font-size: 1.1rem;
-            padding: 14px 20px;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-            display: inline-block;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
         }
 
-        nav a:hover {
-            background-color: #3c6e71;
-            color: white;
-            border-radius: 4px;
+        .navbar .menu a:hover {
+            color: #ff6600;
         }
 
+        .promo-bar {
+            background-color: #eee;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* כותרת ראשית */
         .hero {
-            background-color: #6b4f3a;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 60px 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+            font-size: 36px;
+            color: #333;
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            font-weight: 300;
-        }
-
-        /* כותרות */
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #6b4f3a;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        /* רשת מוצרים */
-        .product-cards {
+        /* סגנון לקטגוריות */
+        .categories {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto;
         }
 
-        .card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .card h3 {
-            font-size: 1.8rem;
-            color: #6b4f3a;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #7f5d45;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-        }
-
-        .card button {
-            padding: 12px 20px;
-            background-color: #2d1f1b;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .card button:hover {
-            background-color: #3c6e71;
-        }
-
-        /* עיצוב ה-footer */
-        footer {
-            background-color: #1b1a1d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 1.1rem;
-        }
-
-        footer a {
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-decoration: none;
-            color: #f4f0e1;
-            font-weight: 700;
+            color: #333;
         }
 
-        footer a:hover {
-            color: #3c6e71;
+        .category .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .category span {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
         }
 
     </style>
 </head>
 <body>
 
-    <!-- תפריט ניווט -->
-    <nav>
-        <a href="#home" class="active">בית</a>
-        <a href="#products">מוצרים</a>
-        <a href="#about">אודות</a>
-        <a href="#contact">צור קשר</a>
-    </nav>
-
-    <!-- כותרת ראשית -->
-    <div class="hero">
-        <h1>ברוכים הבאים לחנות השיער של DKR</h1>
-        <p>מוצרי שיער איכותיים ומקצועיים לשיערך.</p>
-    </div>
-
-    <!-- תוכן מרכזי -->
-    <div class="container">
-        <h2>המוצרים שלנו</h2>
-        <div class="product-cards">
-            <div class="card">
-                <h3>תוספות שיער</h3>
-                <p>הוסף נפח ואורך לשיערך בצורה טבעית ומרשימה.</p>
-                <button>רכוש עכשיו</button>
-            </div>
-            <div class="card">
-                <h3>סבוני שיער</h3>
-                <p>סבונים טבעיים המותאמים לכל סוגי השיער.</p>
-                <button>רכוש עכשיו</button>
-            </div>
-            <div class="card">
-                <h3>מסכות שיער</h3>
-                <p>מסכות שיער עשויות מחומרים טבעיים לבריאות שיערך.</p>
-                <button>רכוש עכשיו</button>
-            </div>
+    <!-- ניווט עליון -->
+    <div class="navbar">
+        <div class="logo">DKR Hair</div>
+        <div class="menu">
+            <a href="#">חדש</a>
+            <a href="#">מותגים</a>
+            <a href="#">מבצעים</a>
+            <a href="#">טיפוח שיער</a>
+            <a href="#">מוצרי חשמל</a>
+            <a href="#">צור קשר</a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 DKR Hair. כל הזכויות שמורות.</p>
-        <p><a href="#contact">צור קשר</a></p>
-    </footer>
+    <!-- באנר פרסומי -->
+    <div class="promo-bar">
+        🚚 משלוח חינם ברכישה מעל ₪250 | 🎁 הצטרפו למועדון הלקוחות שלנו וקבלו 10% הנחה!
+    </div>
+
+    <!-- כותרת ראשית -->
+    <div class="hero">
+        <h1>טיפוח השיער</h1>
+    </div>
+
+    <!-- קטגוריות מוצרים -->
+    <div class="categories">
+        <a href="#" class="category">
+            <div class="circle">שמפו</div>
+            <span>שמפו</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">קונדישנר</div>
+            <span>קונדישנר</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">טיפולים</div>
+            <span>טיפולים</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">כלי שיער</div>
+            <span>כלי שיער</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">חדש בחנות</div>
+            <span>חדש בחנות</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">טיפוח מקצועי</div>
+            <span>טיפוח מקצועי</span>
+        </a>
+    </div>
 
 </body>
 </html>
