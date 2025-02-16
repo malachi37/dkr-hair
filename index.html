@@ -78,17 +78,17 @@
             font-weight: bold;
         }
 
-     /* קטגוריות מוצרים */
-.categories {
-    display: flex;
-    justify-content: space-evenly;  /* ממקם את העיגולים בצורה שווה */
-    align-items: center;           /* מיישר את העיגולים במרכז */
-    gap: 1px;
-    flex-wrap: nowrap;             /* מונע מעבר לשורה חדשה */
-    max-width: 100%;               /* מבטיח שהעיגולים יתפשטו עד לרוחב */
-    margin: 60px auto;
-    overflow-x: auto;             /* אם העיגולים לא נכנסים במסך, יתווסף גלילה אופקית */
-}
+        /* קטגוריות מוצרים */
+        .categories {
+            display: flex;
+            justify-content: space-evenly;  /* ממקם את העיגולים בצורה שווה */
+            align-items: center;           /* מיישר את העיגולים במרכז */
+            gap: 1px;
+            flex-wrap: nowrap;             /* מונע מעבר לשורה חדשה */
+            max-width: 100%;               /* מבטיח שהעיגולים יתפשטו עד לרוחב */
+            margin: 60px auto;
+            overflow-x: auto;             /* אם העיגולים לא נכנסים במסך, יתווסף גלילה אופקית */
+        }
 
         .category {
             display: flex;
@@ -126,6 +126,14 @@
             font-weight: bold;
         }
 
+        /* סגנון התמונות בתוך העיגולים */
+        .category .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* תשמור על העיגול */
+        }
+
     </style>
 </head>
 <body>
@@ -156,20 +164,22 @@
     <!-- קטגוריות מוצרים -->
     <div class="categories">
         <a href="#" class="category">
-            <div class="circle">שמפו</div>
+            <div class="circle">
+                <img src="images/shampoo.jpg" alt="שמפו" />
+            </div>
             <span>שמפו</span>
         </a>
         <a href="#" class="category">
-            <div class="circle">קונדישנר</div>
-            <span>קונדישנר</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle">טיפולים</div>
-            <span>טיפולים</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle">כלי שיער</div>
+            <div class="circle">
+                <img src="images/comb.jpg" alt="כלי שיער" />
+            </div>
             <span>כלי שיער</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">
+                <img src="images/ointment.jpg" alt="טיפולים" />
+            </div>
+            <span>טיפולים</span>
         </a>
         <a href="#" class="category">
             <div class="circle">חדש בחנות</div>
