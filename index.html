@@ -21,7 +21,7 @@
         /* ניווט עליון */
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end; /* מצמיד את התפריט לימין */
             align-items: center;
             padding: 15px 20px;
             background-color: #1E1E1E; /* שחור עמוק */
@@ -36,6 +36,7 @@
             font-size: 24px;
             font-weight: bold;
             color: white;
+            margin-left: auto; /* מציב את הלוגו בצד השמאלי */
         }
 
         .navbar .menu {
@@ -127,7 +128,6 @@
 
     <!-- ניווט עליון -->
     <div class="navbar">
-        <div class="logo">DKR Hair</div>
         <div class="menu">
             <a href="#">חדש</a>
             <a href="#">מותגים</a>
@@ -136,6 +136,7 @@
             <a href="#">מוצרי חשמל</a>
             <a href="#">צור קשר</a>
         </div>
+        <div class="logo">DKR Hair</div>
     </div>
 
     <!-- באנר פרסומי -->
