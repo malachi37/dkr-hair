@@ -10,22 +10,38 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
+            background-color: #f4f0e1; /* קרם */
+            color: #6c4f3d; /* חום כהה */
             margin: 0;
             padding: 0;
         }
         h1 {
-            color: #2c3e50;
+            color: #6c4f3d; /* חום כהה */
         }
         p {
             font-size: 1.2rem;
-            color: #7f8c8d;
+            color: #7f5d45; /* חום בינוני */
+        }
+        /* תפריט ניווט */
+        nav {
+            background-color: #6c4f3d; /* חום כהה */
+            overflow: hidden;
+        }
+        nav a {
+            color: #f4f0e1; /* קרם */
+            padding: 14px 20px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            background-color: #7f5d45; /* חום בינוני */
+            color: white;
         }
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
         }
         .hero-image {
@@ -33,22 +49,28 @@
             height: auto;
         }
         footer {
-            background-color: #2c3e50;
+            background-color: #6c4f3d; /* חום כהה */
             color: white;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             text-align: center;
         }
     </style>
 </head>
 <body>
+    <!-- תפריט ניווט -->
+    <nav>
+        <a href="#home">בית</a>
+        <a href="#products">מוצרים</a>
+        <a href="#about">אודות</a>
+        <a href="#contact">צור קשר</a>
+    </nav>
+
     <div class="container">
         <h1>ברוכים הבאים לחנות השיער של DKR</h1>
         <p>מוצרי השיער האיכותיים ביותר עבורך!</p>
         <img src="hair-products.jpg" alt="מוצרי שיער DKR" class="hero-image">
     </div>
+
     <footer>
         <p>&copy; 2025 DKR Hair. כל הזכויות שמורות.</p>
     </footer>
