@@ -78,14 +78,15 @@
             font-weight: bold;
         }
 
-        /* קטגוריות מוצרים */
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 25px;
-            max-width: 900px;
-            margin: 50px auto;
-        }
+     /* קטגוריות מוצרים */
+.categories {
+    display: flex;
+    justify-content: space-evenly;  /* ממקם את העיגולים בצורה שווה */
+    align-items: center;           /* מיישר את העיגולים במרכז */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 60px auto;
+}
 
         .category {
             display: flex;
