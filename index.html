@@ -79,11 +79,11 @@
         }
 
         /* קטגוריות מוצרים */
-       .categories {
+    .categories {
     display: flex;
     justify-content: center; /* ממרכז את העיגולים */
     align-items: center;
-    gap: 5px; /* מצמצם את הרווח בין העיגולים */
+    gap: 15px; /* מרווח ביניהם */
     flex-wrap: nowrap; /* מבטיח שכל העיגולים יישארו באותה שורה */
     max-width: 100%;
     margin: 20px auto; /* ריווח מינימלי מסביב */
@@ -103,14 +103,15 @@
 }
 
 .category .circle {
-    width: 140px; /* אפשר להישאר עם 150px אם יש מקום */
-    height: 140px;
+    width: 160px; /* הגדלתי ל- 160px */
+    height: 160px;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
         .category .circle:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
