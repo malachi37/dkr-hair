@@ -79,45 +79,45 @@
         }
 
         /* קטגוריות מוצרים */
-    .categories {
-    display: flex;
-    justify-content: center; /* ממרכז את העיגולים */
-    align-items: center;
-    gap: 15px; /* מרווח ביניהם */
-    flex-wrap: nowrap; /* מבטיח שכל העיגולים יישארו באותה שורה */
-    max-width: 100%;
-    margin: 20px auto; /* ריווח מינימלי מסביב */
-    padding: 0;
-    overflow-x: auto; /* מאפשר גלילה אופקית אם אין מספיק מקום */
-}
+        .categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: nowrap;
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 0;
+            overflow-x: auto;
+        }
 
-.category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #1E1E1E;
-    margin: 0;
-    padding: 0;
-    flex-shrink: 0; /* מונע כיווץ של העיגולים */
-}
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #1E1E1E;
+            margin: 0;
+            padding: 0;
+            flex-shrink: 0;
+        }
 
-.category .circle {
-    width: 160px; /* הגדלתי ל- 160px */
-    height: 160px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+        .category .circle {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
 
         .category .circle:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        /* נתיב התמונות (ישירות ב-main, לא בתוך images/) */
+        /* נתיב התמונות */
         .shampoo { background-image: url('shampoo.jpg'); }
         .comb { background-image: url('comb.jpg'); }
         .ointment { background-image: url('ointment.jpg'); }
@@ -175,6 +175,10 @@
         <a href="#" class="category">
             <div class="circle">טיפוח מקצועי</div>
             <span>טיפוח מקצועי</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle">החלקות</div>
+            <span>החלקות</span>
         </a>
     </div>
 
