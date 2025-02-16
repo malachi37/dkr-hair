@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DKR Hair - חנות טיפוח לשיער</title>
     <style>
-        /* איפוס סגנונות דיפולטיביים */
+        /* איפוס סגנונות */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #FAF3E0; /* צבע קרם */
+            background-color: #F8F5F2; /* גוון פנינה */
             text-align: center;
         }
 
@@ -24,9 +24,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
-            background-color: #2D2A2A; /* שחור רך */
+            background-color: #1E1E1E; /* שחור עמוק */
             color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -51,14 +51,16 @@
         }
 
         .navbar .menu a:hover {
-            color: #C89F7C; /* חום רך */
+            color: #D4A373; /* זהב אלגנטי */
         }
 
+        /* באנר פרסומי */
         .promo-bar {
-            background-color: #C89F7C; /* חום רך */
-            padding: 10px;
+            background: linear-gradient(to right, #D4A373, #B5838D); /* מעבר צבע זהב-ורוד עתיק */
+            padding: 12px;
             font-size: 14px;
             color: white;
+            font-weight: bold;
         }
 
         /* כותרת ראשית */
@@ -69,17 +71,18 @@
         }
 
         .hero h1 {
-            font-size: 36px;
-            color: #2D2A2A; /* שחור רך */
+            font-size: 38px;
+            color: #1E1E1E; /* שחור אלגנטי */
+            font-weight: bold;
         }
 
-        /* סגנון לקטגוריות */
+        /* קטגוריות מוצרים */
         .categories {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
+            gap: 25px;
             max-width: 900px;
-            margin: 40px auto;
+            margin: 50px auto;
         }
 
         .category {
@@ -87,31 +90,33 @@
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            color: #2D2A2A; /* שחור רך */
+            color: #1E1E1E; /* שחור אלגנטי */
         }
 
         .category .circle {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            background-color: #E6C7A7; /* גוון חום-קרם רך */
+            background: radial-gradient(circle, #E8D8C4, #D4A373); /* גוון זהוב אלגנטי */
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
             font-weight: bold;
-            color: #2D2A2A; /* שחור רך */
-            transition: transform 0.3s ease-in-out;
+            color: #1E1E1E;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         .category .circle:hover {
             transform: scale(1.1);
-            background-color: #C89F7C; /* חום כהה יותר */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: radial-gradient(circle, #D4A373, #B5838D); /* זהב לורוד עתיק */
             color: white;
         }
 
         .category span {
-            margin-top: 10px;
+            margin-top: 12px;
             font-size: 16px;
             font-weight: bold;
         }
@@ -135,7 +140,7 @@
 
     <!-- באנר פרסומי -->
     <div class="promo-bar">
-        🚚 משלוח חינם ברכישה מעל ₪250 | 🎁 הצטרפו למועדון הלקוחות וקבלו 10% הנחה!
+        🚚 משלוח חינם בקנייה מעל ₪250 | 🎁 הצטרפו למועדון וקבלו 10% הנחה ראשונה!
     </div>
 
     <!-- כותרת ראשית -->
