@@ -109,15 +109,16 @@
         }
 
         /* קטגוריות מוצרים */
-        .categories {
+       .categories {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 15px;
+            flex-wrap: nowrap;
             max-width: 100%;
             margin: 20px auto;
             padding: 0;
+            overflow-x: auto;
         }
 
         .category {
@@ -126,6 +127,8 @@
             align-items: center;
             text-decoration: none;
             color: #1E1E1E;
+            margin: 0;
+            padding: 0;
             flex-shrink: 0;
         }
 
@@ -133,13 +136,8 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            background-color: #D4A373;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
+            background-size: cover;
+            background-position: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
@@ -149,11 +147,19 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
+        /* נתיב התמונות */
+        .shampoo { background-image: url('shampoo.jpg'); }
+        .comb { background-image: url('comb.jpg'); }
+        .ointment { background-image: url('ointment.jpg'); }
+
         .category span {
             margin-top: 12px;
             font-size: 16px;
             font-weight: bold;
         }
+    </style>
+</head>
+<body>
 
         /* רספונסיביות למסכים קטנים */
         @media (max-width: 768px) {
