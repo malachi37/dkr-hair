@@ -102,13 +102,8 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            background-color: #D4A373;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
+            background-size: cover;
+            background-position: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
@@ -117,6 +112,10 @@
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
+        .shampoo { background-image: url('shampoo.jpg'); }
+        .comb { background-image: url('comb.jpg'); }
+        .ointment { background-image: url('ointment.jpg'); }
 
         .category span {
             margin-top: 12px;
@@ -166,15 +165,15 @@
     <!-- קטגוריות מוצרים -->
     <div class="categories">
         <a href="#" class="category">
-            <div class="circle">שמפו</div>
+            <div class="circle shampoo"></div>
             <span>שמפו</span>
         </a>
         <a href="#" class="category">
-            <div class="circle">כלי שיער</div>
+            <div class="circle comb"></div>
             <span>כלי שיער</span>
         </a>
         <a href="#" class="category">
-            <div class="circle">טיפולים</div>
+            <div class="circle ointment"></div>
             <span>טיפולים</span>
         </a>
         <a href="#" class="category">
