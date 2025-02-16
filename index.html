@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl"> <!-- הוספתי dir="rtl" כאן -->
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +8,29 @@
     <meta name="author" content="DKR Hair">
     <title>DKR Hair</title>
     <style>
+        /* כלליים */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f0e1; /* קרם */
             color: #6c4f3d; /* חום כהה */
             margin: 0;
             padding: 0;
-            text-align: right; /* הוספתי את זה כדי למנוע את הצמדת הטקסט לשמאל */
+            text-align: right;
+            line-height: 1.6;
         }
-        h1 {
-            color: #6c4f3d; /* חום כהה */
+        h1, h2, h3 {
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
         }
-        p {
-            font-size: 1.2rem;
-            color: #7f5d45; /* חום בינוני */
-        }
+
         /* תפריט ניווט */
         nav {
             background-color: #6c4f3d; /* חום כהה */
             overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         nav a {
             color: #f4f0e1; /* קרם */
@@ -35,45 +39,4 @@
             display: inline-block;
             text-decoration: none;
             font-size: 1.1rem;
-        }
-        nav a:hover {
-            background-color: #7f5d45; /* חום בינוני */
-            color: white;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        .hero-image {
-            width: 100%;
-            height: auto;
-        }
-        footer {
-            background-color: #6c4f3d; /* חום כהה */
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <!-- תפריט ניווט -->
-    <nav>
-        <a href="#home">בית</a>
-        <a href="#products">מוצרים</a>
-        <a href="#about">אודות</a>
-        <a href="#contact">צור קשר</a>
-    </nav>
-
-    <div class="container">
-        <h1>ברוכים הבאים לחנות השיער של DKR</h1>
-        <p>מוצרי השיער האיכותיים ביותר עבורך!</p>
-        <img src="hair-products.jpg" alt="מוצרי שיער DKR" class="hero-image">
-    </div>
-
-    <footer>
-        <p>&copy; 2025 DKR Hair. כל הזכויות שמורות.</p>
-    </footer>
-</body>
-</html>
+  
