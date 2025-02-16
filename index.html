@@ -34,25 +34,56 @@
             z-index: 1000;
         }
 
-        .navbar .logo {
+        .logo {
             font-size: 24px;
             font-weight: bold;
+            margin-left: 20px;
         }
 
-        .navbar .menu {
+        .menu {
             display: flex;
             gap: 20px;
         }
 
-        .navbar .menu a {
+        .menu a {
             text-decoration: none;
             color: white;
             font-size: 16px;
             transition: color 0.3s;
         }
 
-        .navbar .menu a:hover {
+        .menu a:hover {
             color: #D4A373;
+        }
+
+        /* אייקון תפריט לנייד */
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #1E1E1E;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #D4A373;
         }
 
         /* באנר מבצע */
@@ -102,8 +133,13 @@
             width: 160px;
             height: 160px;
             border-radius: 50%;
-            background-size: cover;
-            background-position: center;
+            background-color: #D4A373;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
@@ -112,10 +148,6 @@
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-
-        .shampoo { background-image: url('shampoo.jpg'); }
-        .comb { background-image: url('comb.jpg'); }
-        .ointment { background-image: url('ointment.jpg'); }
 
         .category span {
             margin-top: 12px;
@@ -126,22 +158,34 @@
         /* רספונסיביות למסכים קטנים */
         @media (max-width: 768px) {
             .navbar {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: row;
+                justify-content: center;
             }
 
-            .navbar .menu {
-                flex-direction: column;
-                gap: 10px;
+            .logo {
+                margin: 0 auto;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
             }
         }
     </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
 </head>
 <body>
 
     <!-- ניווט עליון -->
     <div class="navbar">
-        <div class="logo">DKR Hair</div>
         <div class="menu">
             <a href="#">חדש</a>
             <a href="#">מותגים</a>
@@ -150,44 +194,23 @@
             <a href="#">מוצרי חשמל</a>
             <a href="#">צור קשר</a>
         </div>
+        <div class="logo">DKR Hair</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <!-- תפריט נייד -->
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#">חדש</a>
+        <a href="#">מותגים</a>
+        <a href="#">מבצעים</a>
+        <a href="#">טיפוח שיער</a>
+        <a href="#">מוצרי חשמל</a>
+        <a href="#">צור קשר</a>
     </div>
 
     <!-- באנר מבצע -->
     <div class="promo-bar">
         🚚 משלוח חינם בקנייה מעל ₪250 | 🎁 הצטרפו למועדון וקבלו 10% הנחה ראשונה!
-    </div>
-
-    <!-- כותרת ראשית -->
-    <div class="hero">
-        <h1>טיפוח השיער</h1>
-    </div>
-
-    <!-- קטגוריות מוצרים -->
-    <div class="categories">
-        <a href="#" class="category">
-            <div class="circle shampoo"></div>
-            <span>שמפו</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle comb"></div>
-            <span>כלי שיער</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle ointment"></div>
-            <span>טיפולים</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle">חדש בחנות</div>
-            <span>חדש בחנות</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle">טיפוח מקצועי</div>
-            <span>טיפוח מקצועי</span>
-        </a>
-        <a href="#" class="category">
-            <div class="circle">החלקות</div>
-            <span>החלקות</span>
-        </a>
     </div>
 </body>
 </html>
