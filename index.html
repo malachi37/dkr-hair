@@ -32,10 +32,6 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         nav a {
@@ -131,7 +127,6 @@
         }
 
         .card button {
-            margin-top: 10px;
             padding: 12px 20px;
             background-color: #2d1f1b; /* חום כהה */
             color: white;
@@ -168,10 +163,12 @@
         footer a:hover {
             color: #3c6e71; /* כחול כהה-ירוק */
         }
+
     </style>
 </head>
 <body>
 
+    <!-- תפריט ניווט -->
     <nav>
         <a href="#home" class="active">בית</a>
         <a href="#products">מוצרים</a>
@@ -179,11 +176,13 @@
         <a href="#contact">צור קשר</a>
     </nav>
 
+    <!-- כותרת Hero -->
     <div class="hero">
         <h1>ברוכים הבאים לחנות השיער של DKR</h1>
         <p>מוצרי שיער איכותיים ומקצועיים לשיערך.</p>
     </div>
 
+    <!-- תוכן מרכזי -->
     <div class="container">
         <h2>המוצרים שלנו</h2>
         <div class="product-cards">
@@ -204,5 +203,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DKR Hair. כל הזכויות שמורות.</p>
+        <p><a href="#contact">צור קשר</a></p>
+    </footer>
+
 </body>
 </html>
