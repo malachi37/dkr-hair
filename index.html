@@ -140,7 +140,6 @@
             background-position: center;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            z-index: 1;
         }
 
         .category .circle:hover {
@@ -152,6 +151,11 @@
         .shampoo { background-image: url('shampoo.jpg'); }
         .comb { background-image: url('comb.jpg'); }
         .ointment { background-image: url('ointment.jpg'); }
+
+        /* עיגולים ללא תמונה */
+        .hairTreatment { background-color: #E0E0E0; }
+        .tools { background-color: #C8C8C8; }
+        .accessories { background-color: #B0B0B0; }
 
         .category span {
             margin-top: 12px;
@@ -225,7 +229,26 @@
             <div class="circle ointment"></div>
             <span>מסכות</span>
         </a>
+        <a href="#" class="category">
+            <div class="circle hairTreatment"></div>
+            <span>טיפולי שיער</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle tools"></div>
+            <span>כלי עבודה</span>
+        </a>
+        <a href="#" class="category">
+            <div class="circle accessories"></div>
+            <span>אביזרים</span>
+        </a>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
 
 </body>
 </html>
