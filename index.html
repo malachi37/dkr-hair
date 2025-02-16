@@ -164,11 +164,38 @@
             color: #3c6e71; /* כחול כהה-ירוק */
         }
 
+        /* התאמות למובייל */
+        @media (max-width: 768px) {
+            .product-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            nav {
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <!-- תפריט ניווט -->
     <nav>
         <a href="#home" class="active">בית</a>
         <a href="#products">מוצרים</a>
@@ -176,13 +203,11 @@
         <a href="#contact">צור קשר</a>
     </nav>
 
-    <!-- כותרת Hero -->
     <div class="hero">
         <h1>ברוכים הבאים לחנות השיער של DKR</h1>
         <p>מוצרי שיער איכותיים ומקצועיים לשיערך.</p>
     </div>
 
-    <!-- תוכן מרכזי -->
     <div class="container">
         <h2>המוצרים שלנו</h2>
         <div class="product-cards">
@@ -191,24 +216,11 @@
                 <p>הוסף נפח ואורך לשיערך בצורה טבעית ומרשימה.</p>
                 <button>רכוש עכשיו</button>
             </div>
-            <div class="card">
-                <h3>סבוני שיער</h3>
-                <p>סבונים טבעיים המותאמים לכל סוגי השיער.</p>
-                <button>רכוש עכשיו</button>
-            </div>
-            <div class="card">
-                <h3>מסכות שיער</h3>
-                <p>מסכות שיער עשויות מחומרים טבעיים לבריאות שיערך.</p>
-                <button>רכוש עכשיו</button>
-            </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 DKR Hair. כל הזכויות שמורות.</p>
-        <p><a href="#contact">צור קשר</a></p>
     </footer>
-
 </body>
 </html>
