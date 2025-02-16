@@ -17,22 +17,24 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f3f1;
-            color: #2d1f1b;
+            background-color: #f5f3f1; /* רקע קרם בהיר מאוד */
+            color: #2d1f1b; /* חום כהה מאוד */
             line-height: 1.6;
             text-align: right;
         }
 
         /* תפריט ניווט */
         nav {
-            background-color: #6b4f3a;
-            color: #f4f0e1;
+            background-color: #6b4f3a; /* חום בינוני */
+            color: #f4f0e1; /* קרם */
             padding: 12px 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -41,23 +43,49 @@
             font-size: 1.1rem;
             padding: 14px 20px;
             margin: 0 10px;
-            display: inline-block;
             transition: all 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #3c6e71;
+            background-color: #3c6e71; /* כחול כהה-ירוק */
             color: white;
             border-radius: 4px;
         }
 
+        nav a.active {
+            background-color: #6b4f3a; /* חום בינוני */
+            color: white;
+        }
+
         /* Hero Section */
         .hero {
-            background-color: #6b4f3a;
+            background-color: #6b4f3a; /* חום בינוני */
             color: white;
             text-align: center;
             padding: 80px 20px;
             margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* כותרת */
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6b4f3a;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
         /* קונטיינר למוצרים */
@@ -81,6 +109,7 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             text-align: center;
+            height: 100%;
         }
 
         .card:hover {
@@ -88,9 +117,22 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
 
+        .card h3 {
+            font-size: 1.8rem;
+            color: #6b4f3a;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #7f5d45;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
         .card button {
+            margin-top: 10px;
             padding: 12px 20px;
-            background-color: #2d1f1b;
+            background-color: #2d1f1b; /* חום כהה */
             color: white;
             border: none;
             border-radius: 4px;
@@ -100,35 +142,32 @@
         }
 
         .card button:hover {
-            background-color: #3c6e71;
+            background-color: #3c6e71; /* כחול כהה-ירוק */
         }
 
-        /* התאמות מובייל */
-        @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 10px 0;
-            }
-            
-            nav a {
-                display: block;
-                padding: 10px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .product-cards {
-                grid-template-columns: 1fr;
-            }
+        /* כותרת Footer */
+        footer {
+            background-color: #1b1a1d; /* שחור בהיר */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
         }
+
+        footer p {
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #f4f0e1;
+            font-weight: 700;
+        }
+
+        footer a:hover {
+            color: #3c6e71; /* כחול כהה-ירוק */
+        }
+
     </style>
 </head>
 <body>
@@ -154,16 +193,6 @@
             <div class="card">
                 <h3>תוספות שיער</h3>
                 <p>הוסף נפח ואורך לשיערך בצורה טבעית ומרשימה.</p>
-                <button>רכוש עכשיו</button>
-            </div>
-            <div class="card">
-                <h3>סבוני שיער</h3>
-                <p>סבונים טבעיים המותאמים לכל סוגי השיער.</p>
-                <button>רכוש עכשיו</button>
-            </div>
-            <div class="card">
-                <h3>מסכות שיער</h3>
-                <p>מסכות שיער עשויות מחומרים טבעיים לבריאות שיערך.</p>
                 <button>רכוש עכשיו</button>
             </div>
         </div>
