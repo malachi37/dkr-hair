@@ -79,35 +79,38 @@
         }
 
         /* קטגוריות מוצרים */
-        .categories {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 1px;
-            flex-wrap: nowrap;
-            max-width: 100%;
-            margin: 60px auto;
-            overflow-x: auto;
-        }
+       .categories {
+    display: flex;
+    justify-content: center; /* ממרכז את העיגולים */
+    align-items: center;
+    gap: 5px; /* מצמצם את הרווח בין העיגולים */
+    flex-wrap: nowrap; /* מבטיח שכל העיגולים יישארו באותה שורה */
+    max-width: 100%;
+    margin: 20px auto; /* ריווח מינימלי מסביב */
+    padding: 0;
+    overflow-x: auto; /* מאפשר גלילה אופקית אם אין מספיק מקום */
+}
 
-        .category {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #1E1E1E;
-        }
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1E1E1E;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0; /* מונע כיווץ של העיגולים */
+}
 
-        .category .circle {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
+.category .circle {
+    width: 140px; /* אפשר להישאר עם 150px אם יש מקום */
+    height: 140px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
         .category .circle:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
